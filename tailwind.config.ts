@@ -1,6 +1,6 @@
-import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
 
-const config: Config = {
+module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,24 +14,22 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    screens: {
+      'sm': '375px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    }
   },
   plugins: [],
-  screens: {
-    'sm': '640px',
-    // => @media (min-width: 640px) { ... }
-
-    'md': '768px',
-    // => @media (min-width: 768px) { ... }
-
-    'lg': '1024px',
-    // => @media (min-width: 1024px) { ... }
-
-    'xl': '1280px',
-    // => @media (min-width: 1280px) { ... }
-
-    '2xl': '1536px',
-    // => @media (min-width: 1536px) { ... }
-  }
-
 };
-export default config;
