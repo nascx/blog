@@ -19,7 +19,7 @@ const CommentCard = ({ date, title, content } : CommentCardProps ) => {
     }
 
     return (
-        <div className={`flex flex-col px-6 py-5 rounded-lg border sm:w-80 shadow-inner ${liked ? 'border-[#E07B67]' : 'border-[#252529]'} md:w-11/12 `}>
+        <div className={`flex flex-col px-6 py-5 rounded-lg border sm:w-80 shadow-inner ${liked ? 'border-[#E07B67]' : 'border-[#252529]'} md:w-11/12 xl:w-10/12`}>
             <div className="flex justify-between items-start w-full text-[#E07B67] sm:text-sm ">
                 <p>{date}</p>
                 {
